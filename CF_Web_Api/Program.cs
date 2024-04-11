@@ -1,5 +1,8 @@
 using CF_Web_Api.Data;
+<<<<<<< HEAD
 using CF_Web_Api.Interface;
+=======
+>>>>>>> 60ecb38452a540eb3b866d67bc8f73caee70ae99
 using CF_Web_Api.Repository;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -15,6 +18,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+<<<<<<< HEAD
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IBlocksRepository, BlocksRepository>();
@@ -28,6 +32,9 @@ builder.Services.AddScoped<IDanhGiaRepository, DanhGiaRepository>();
 builder.Services.AddScoped<IFormDanhGiaRepository, FormDanhGiaRepository>();
 builder.Services.AddScoped<IReportAuthorizesRepository, ReportAuthorizesRepository>();
 builder.Services.AddScoped<IReportDanhGiaRepository, ReportDanhGiaRepository>();
+=======
+builder.Services.AddScoped<IAccountRepository, AccountRepository>();
+>>>>>>> 60ecb38452a540eb3b866d67bc8f73caee70ae99
 builder.Services.AddCors(options => options.AddDefaultPolicy(policy => policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()));
 
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>()

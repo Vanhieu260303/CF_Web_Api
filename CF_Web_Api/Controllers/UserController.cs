@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 ﻿using CF_Web_Api.Interface;
 using CF_Web_Api.Repository;
+=======
+﻿using CF_Web_Api.Repository;
+>>>>>>> 60ecb38452a540eb3b866d67bc8f73caee70ae99
 using CF_Web_Api.Service;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -11,9 +15,15 @@ namespace CF_Web_Api.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
+<<<<<<< HEAD
         private readonly IUserRepository accountRepo;
 
         public UserController(IUserRepository repo)
+=======
+        private readonly IAccountRepository accountRepo;
+
+        public UserController(IAccountRepository repo)
+>>>>>>> 60ecb38452a540eb3b866d67bc8f73caee70ae99
         {
             accountRepo = repo;
         }
