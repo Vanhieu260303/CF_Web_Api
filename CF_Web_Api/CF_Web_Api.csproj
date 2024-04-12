@@ -7,6 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+<<<<<<< HEAD
+    <PackageReference Include="AutoMapper" Version="11.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+=======
+>>>>>>> 60ecb38452a540eb3b866d67bc8f73caee70ae99
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.28" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.28" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.28" />

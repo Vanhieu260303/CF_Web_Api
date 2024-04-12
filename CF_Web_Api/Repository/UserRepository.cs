@@ -1,53 +1,23 @@
 ﻿using CF_Web_Api.Data;
-<<<<<<< HEAD
 using CF_Web_Api.Interface;
-using System.Xml.Linq;
-=======
 using CF_Web_Api.Service;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
->>>>>>> 60ecb38452a540eb3b866d67bc8f73caee70ae99
 
 namespace CF_Web_Api.Repository
 {
-    public class AccountRepository : IAccountRepository
+    public class UserRepository : IUserRepository
     {
-<<<<<<< HEAD
-        private readonly DataContext _dbcontext;
-        public AccountRepository(DataContext dbcontext) 
-        {
-            _dbcontext = dbcontext;
-        }
-
-        public bool AccountsExits(Guid Id)
-        {
-            return _dbcontext.Accounts.Any(a => a.Id == Id);
-        }
-
-        public Account GetAccount(Guid Id)
-        {
-            return _dbcontext.Accounts.Where(a => a.Id == Id).FirstOrDefault();
-        }
-
-        public Account GetAccount(string Name)
-        {
-            return _dbcontext.Accounts.Where(a => a.UserName == Name).FirstOrDefault();
-        }
-
-        public ICollection<Account> GetAccounts()
-        {
-            return _dbcontext.Accounts.ToList();
-=======
         private readonly UserManager<ApplicationUser> userManager;
         private readonly SignInManager<ApplicationUser> signInManager;
         private readonly IConfiguration configuration;
 
 
 
-        public AccountRepository(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, IConfiguration configuration)
+        public UserRepository(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, IConfiguration configuration)
         {
             this.userManager = userManager;
             this.signInManager = signInManager;
@@ -95,7 +65,6 @@ namespace CF_Web_Api.Repository
             };
 
             return await userManager.CreateAsync(user, model.Password);
->>>>>>> 60ecb38452a540eb3b866d67bc8f73caee70ae99
         }
     }
 }
