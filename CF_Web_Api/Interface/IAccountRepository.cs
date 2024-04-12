@@ -2,11 +2,13 @@
 
 namespace CF_Web_Api.Interface
 {
-    public interface IAccountRepository
-    {
-        ICollection<Account> GetAccounts();
-        Account GetAccount(Guid Id);
-        Account GetAccount(string Name);
-        bool AccountsExits(Guid Id);
-    }
+   
+      
+        public interface IAccountRepository
+        {
+            ICollection<Account> GetAccounts();
+            Account GetAccount(Guid Id);
+            bool AccountExits(Guid Id);
+        }
+   
 }

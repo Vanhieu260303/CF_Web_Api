@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using CF_Web_Api.Dto;
 using CF_Web_Api.Interface;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CF_Web_Api.Controllers
@@ -32,7 +31,7 @@ namespace CF_Web_Api.Controllers
         [HttpGet("{Id}")]
         public IActionResult GetAccountById(Guid Id)
         {
-            if (!_accountRepository.AccountsExits(Id))
+            if (!_accountRepository.AccountExits(Id))
                 return BadRequest();
 
             var account = _mapper.Map<AccountDto>(_accountRepository.GetAccount(Id));
